@@ -1,0 +1,30 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dialog__list {
+    padding: 10px;
+}
+
+.messages {
+    padding: 10px;
+}
+
+.dialog {
+    color: white;
+}
+
+.message {
+    color: wheat;
+}
