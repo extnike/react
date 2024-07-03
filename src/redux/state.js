@@ -1,3 +1,6 @@
+import rerenderEntireTree from "../render.jsx"
+
+
 let dialogsData = [
     {id: 1, name: 'Ivan'},
     {id: 2, name: 'Petr'},
@@ -27,6 +30,13 @@ const state = {
         messagesData: messagesData,
         dialogsData: dialogsData
     }
+}
+
+export let addPost = (postMessage) => {
+    state.profile.postsData.push({
+        id: 6, likesCount: 0, text: postMessage
+    })
+    rerenderEntireTree(state)
 }
 
 export default state
