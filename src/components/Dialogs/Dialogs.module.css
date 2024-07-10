@@ -28,3 +28,8 @@ a {
 .message {
     color: wheat;
 }
+
+.button {
+    width: 80px;
+    height: 30px;
+}

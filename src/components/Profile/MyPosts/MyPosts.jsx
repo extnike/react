@@ -1,18 +1,19 @@
 import classes from './MyPosts.module.css'
 import Post from './Post/Post';
 import React from "react";
+import {addPostCreator, updateNewPostTextCreator} from "../../../redux/state.js";
 
 const MyPosts = (props) => {
 
     let newPostElement = React.createRef()
 
     let addPost = () => {
-        props.addPost()
+        props.dispatch(addPostCreator())
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value
-        props.updateNewPostText(text)
+        props.dispatch(updateNewPostTextCreator(text))
     }
 
     return <div className={classes.user__posts}>
